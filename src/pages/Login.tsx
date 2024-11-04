@@ -1,5 +1,6 @@
 import { Box, Container, Grid2 } from '@mui/material';
-import { BannerImage, FormComponent } from '@/components';
+import { BannerImage, FormComponent, Logo, StyledH1, StyledP } from '@/components';
+import { pxToRem } from '@/utils';
 
 const LoginPage = () => (
     <Box>
@@ -15,19 +16,21 @@ const LoginPage = () => (
                 }}
             >
                 <Container maxWidth="sm">
-                    <div className="login-area">
-                        <h2>Login</h2>
-                        <FormComponent
-                            inputs={[
-                                { type: 'email', placeholder: 'E-mail' },
-                                { type: 'password', placeholder: 'Senha' }
-                            ]}
-                            buttons={[
-                                { type: 'submit', className: 'primary', children: 'Login' }
-                            ]}
-                            message={[{ type: 'sucess', msg: 'Login realizado com sucesso!' }]}
-                        />
-                    </div>
+                    <Box sx={{ marginBottom: pxToRem(24) }}><Logo height={41} width={100} /></Box>
+                    <Box sx={{ marginBottom: pxToRem(24) }}>
+                        <StyledH1>Bem-vindo</StyledH1>
+                        <StyledP>Digite sua senha e e-mail para logar</StyledP>
+                    </Box>
+                    <FormComponent
+                        inputs={[
+                            { type: 'email', placeholder: 'E-mail' },
+                            { type: 'password', placeholder: 'Senha' }
+                        ]}
+                        buttons={[
+                            { type: 'submit', className: 'primary', children: 'Login' }
+                        ]}
+                        message={[{ type: 'sucess', msg: 'Login realizado com sucesso!' }]}
+                    />
                 </Container>
             </Grid2>
 
