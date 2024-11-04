@@ -1,24 +1,48 @@
-import { BannerImage } from "@/components";
-import { Box, Container, Grid2 } from "@mui/material";
+import { Box, Container, Grid2 } from '@mui/material';
+import { BannerImage, FormComponent } from '@/components';
 
+const LoginPage = () => (
+    <Box>
+        <Grid2 container component="div">
+            {/* Seção da Esquerda - Formulário de Login */}
+            <Grid2
+                component="div"
+                sx={{
+                    flex: { xs: '1 1 100%', sm: '1 1 50%' },
+                    display: 'flex',
+                    alignItems: 'center',
+                    height: '100vh'
+                }}
+            >
+                <Container maxWidth="sm">
+                    <div className="login-area">
+                        <h2>Login</h2>
+                        <FormComponent
+                            inputs={[
+                                { type: 'email', placeholder: 'E-mail' },
+                                { type: 'password', placeholder: 'Senha' }
+                            ]}
+                            buttons={[
+                                { type: 'submit', className: 'primary', children: 'Login' }
+                            ]}
+                            message={[{ type: 'sucess', msg: 'Login realizado com sucesso!' }]}
+                        />
+                    </div>
+                </Container>
+            </Grid2>
 
-const Login = () => {
-    return (
-        <>
-            <Box>
-                <Grid2 container component="div">
-                    <Grid2 component="div" sx={{ flex: { xs: "100%", sm: "40%" }, alignItems: 'center', display: 'flex', height: '100vh' }}>
-                        <Container maxWidth='sm'>
-                            <h1>LOGIN</h1>
-                        </Container>
-                    </Grid2>
-                    <Grid2 component="div" sx={{ flex: { xs: "50%", sm: "40%" }, display: { xs: 'grid', sm: 'block' } }}>
-                        <BannerImage />
-                    </Grid2>
-                </Grid2>
-            </Box>
-        </>
-    );
-};
+            {/* Seção da Direita - Imagem do Banner */}
+            <Grid2
+                component="div"
+                sx={{
+                    flex: { xs: '1 1 100%', sm: '1 1 50%' },
+                    display: { xs: 'none', sm: 'block' }
+                }}
+            >
+                <BannerImage />
+            </Grid2>
+        </Grid2>
+    </Box>
+);
 
-export default Login;
+export default LoginPage;

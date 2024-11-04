@@ -1,25 +1,51 @@
-import { Box, Container, Grid2 } from "@mui/material";
-import { BannerImage } from "@/components";
+import { Box, Container, Grid2 } from '@mui/material';
+import { BannerImage, FormComponent } from '@/components';
 
+const RegisterPage = () => (
+    <Box>
+        <Grid2 container component="div">
+            {/* Seção da Esquerda - Formulário de Cadastro */}
+            <Grid2
+                component="div"
+                sx={{
+                    xs: 12,
+                    sm: 6,
+                    display: 'flex',
+                    alignItems: 'center',
+                    height: '100vh'
+                }}
+            >
+                <Container maxWidth="sm">
+                    <div className="register-area">
+                        <h2>Cadastro</h2>
+                        <FormComponent
+                            inputs={[
+                                { type: 'text', placeholder: 'Nome' },
+                                { type: 'email', placeholder: 'E-mail' },
+                                { type: 'password', placeholder: 'Senha' }
+                            ]}
+                            buttons={[
+                                { type: 'submit', className: 'primary', children: 'Cadastrar' }
+                            ]}
+                            message={[{ type: 'error', msg: 'Erro no cadastro. Tente novamente.' }]}
+                        />
+                    </div>
+                </Container>
+            </Grid2>
 
-const Registration = () => {
-    return (
-        <>
+            {/* Seção da Direita - Imagem do Banner */}
+            <Grid2
+                component="div"
+                sx={{
+                    xs: 12,
+                    sm: 6,
+                    display: { xs: 'none', sm: 'block' }
+                }}
+            >
+                <BannerImage />
+            </Grid2>
+        </Grid2>
+    </Box>
+);
 
-            <Box>
-                <Grid2 container component="div">
-                    <Grid2 component="div" sx={{ flex: { xs: "100%", sm: "50%" }, alignItems: 'center', display: 'flex', height: '100vh' }}>
-                        <Container maxWidth='sm'>
-                            <h1>CADASTRO</h1>
-                        </Container>
-                    </Grid2>
-                    <Grid2 component="div" sx={{ flex: { xs: "50%", sm: "50%" }, display: { xs: 'grid', sm: 'block' } }}>
-                        <BannerImage />
-                    </Grid2>
-                </Grid2>
-            </Box>
-        </>
-    );
-};
-
-export default Registration;
+export default RegisterPage;
