@@ -33,7 +33,7 @@ export const lightTheme: Theme = {
         disabledColor: '#666',
         placeholderColor: '#666',
     },
-    typegraphies: {
+    typographies: {
         error: '#FF0202',
         subtitle: '#666',
         success: '#008000',
@@ -73,7 +73,7 @@ export const darkTheme: Theme = {
         disabledColor: '#58677C',
         placeholderColor: '#89A7CE',
     },
-    typegraphies: {
+    typographies: {
         error: '#FF0202',
         subtitle: '#89A7CE',
         success: '#008000',

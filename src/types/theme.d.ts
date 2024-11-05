@@ -7,7 +7,7 @@ export interface Theme {
     appLogo: string
     appSkeletonFrom: string
     appSkeletonTo: string
-    buttons:{
+    buttons: {
         alert: string
         alertColor: string
         alertHover: string
@@ -17,14 +17,14 @@ export interface Theme {
         primaryColor: string
         primaryHover: string
     }
-    card:{
+    card: {
         alert: string
         background: string
         border: string
         success: string
         warning: string
     }
-    textInput:{
+    textInput: {
         active: string
         activeColor: string
         borderColor: string
@@ -33,7 +33,7 @@ export interface Theme {
         disabledColor: string
         placeholderColor: string
     }
-    typegraphies:{
+    typographies: {
         error: string
         subtitle: string
         success: string
