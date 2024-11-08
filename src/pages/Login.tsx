@@ -1,4 +1,7 @@
 import { ChangeEvent, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { jwtDecode } from 'jwt-decode';
+import Cookies from 'js-cookie';
 
 //COMPONENTS
 import { Box, Container, Grid2 } from '@mui/material';
@@ -8,13 +11,14 @@ import { BannerImage, FormComponent, Logo, StyledH1, StyledP } from '@/component
 import { useFormValidation, usePost } from '@/hooks';
 
 //UTILS
-import { pxToRem } from '@/utils';
+import { pxToRem, jwtExpirationDateConverter } from '@/utils';
 
 //TYPES
-import { MessageProps, LoginData, LoginPostData } from '@/types';
+import { MessageProps, LoginData, LoginPostData, DecodedJWT } from '@/types';
 
 
 function Login() {
+    const navigate = useNavigate()
     const inputs = [
         { types: 'email', placeholder: 'Email' },
         { types: 'password', placeholder: 'Senha' },
@@ -51,9 +55,14 @@ function Login() {
 
     useEffect(() => {
         if (data?.jwt_token) {
-            console.log('DATA: ', data)
+            const decoded: DecodedJWT = jwtDecode(data?.jwt_token)
+            Cookies.set('Authorization', data?.jwt_token, {
+                expires: jwtExpirationDateConverter(decoded.exp),
+                secure: true
+            })
+            if (Cookies.get('Authorization')) navigate('/home')
         }
-    }, [data]);
+    }, [data, navigate]);
 
     return (
         <>
