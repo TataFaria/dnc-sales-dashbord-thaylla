@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyleButton, StyleInput } from "@/components";
+import { StyleButton, StyleInput, StyledP } from "@/components";
 import { FormComponentProps } from "@/types";
 import { pxToRem } from "@/utils";
 
@@ -10,7 +10,8 @@ export const StyledForm = styled.form`
 `;
 
 
-const FormComponent = ({ inputs, buttons, message }: FormComponentProps) => {
+function FormComponent(props: FormComponentProps) {
+    const { inputs, buttons, message } = props
     return (
         <StyledForm>
             {inputs.map((inputProps, index) => (
@@ -20,12 +21,12 @@ const FormComponent = ({ inputs, buttons, message }: FormComponentProps) => {
                 <StyleButton key={index} {...buttonProps} />
             ))}
             {message && (
-                <div style={{ color: message[0].type === 'error' ? 'red' : 'green' }}>
-                    {message[0].msg}
-                </div>
+                <StyledP className={message.type === 'error' ? 'error' : 'success'}>
+                    {message.msg}
+                </StyledP>
             )}
         </StyledForm>
-    );
-};
+    )
+}
 
-export default FormComponent;
+export default FormComponent
