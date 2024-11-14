@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ButtonProps } from "@/types";
 import { pxToRem } from "@/utils";
 
-export const StyleButton = styled.button<ButtonProps>`
+export const StyledButton = styled.button<ButtonProps>`
     border-radius: ${pxToRem(8)};
     border: none;
     box-sizing: border-box;

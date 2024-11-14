@@ -19,6 +19,16 @@ line-height: ${(props) => pxToRem(props.lineHeight || 24)};
 letter-spacing: ${pxToRem(-1)};
 `;
 
+export const StyledH3 = styled.h3<TypographyProps>`
+color: ${(props) => props.color || 'inherit'};
+font-size: ${(props) => pxToRem(props.size || 16)};
+font-weight: ${(props) => pxToRem(props.weight || 600)};
+line-height: ${(props) => pxToRem(props.lineHeight || 24)};
+letter-spacing: ${pxToRem(-1)};
+`;
+
+
+
 export const StyledP = styled.p<TypographyProps>`
 color: ${(props) => props.color || 'inherit'};
 font-size: ${(props) => pxToRem(props.size || 16)};
