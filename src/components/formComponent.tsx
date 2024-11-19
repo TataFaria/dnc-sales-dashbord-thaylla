@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyleButton, StyleInput, StyledP } from "@/components";
+import { StyledButton, StyleInput, StyledP } from "@/components";
 import { FormComponentProps } from "@/types";
 import { pxToRem } from "@/utils";
 
@@ -18,7 +18,7 @@ function FormComponent(props: FormComponentProps) {
                 <StyleInput key={index} {...inputProps} />
             ))}
             {buttons.map((buttonProps, index) => (
-                <StyleButton key={index} {...buttonProps} />
+                <StyledButton key={index} {...buttonProps} />
             ))}
             {message && (
                 <StyledP className={message.type === 'error' ? 'error' : 'success'}>
