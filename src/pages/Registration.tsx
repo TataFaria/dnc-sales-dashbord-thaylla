@@ -83,7 +83,13 @@ function Registration() {
         <>
             <Box>
                 <Grid2 container>
-                    <Grid2 sx={{ xs: 12, sm: 6, alignItems: 'center', display: 'flex', height: '100vh' }}>
+                    <Grid2 component="div"
+                        sx={{
+                            flex: { xs: '1 1 100%', sm: '1 1 50%' },
+                            display: 'flex',
+                            alignItems: 'center',
+                            height: '100vh',
+                        }}>
                         <Container maxWidth="sm">
                             <Box sx={{ marginBottom: pxToRem(24) }}>
                                 <Logo height={41} width={100} />
