@@ -13,13 +13,17 @@ import { useFormValidation, usePost } from '@/hooks'
 // UTILS
 import { pxToRem } from '@/utils'
 
-// TYPES
-import { createProfileData } from '@/types'
+// REDUX
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from '@/redux'
+import { setMessage, setProfileData } from '@/redux/slices/createProfile'
+import { CreateProfileData } from '@/types'
+
 
 function Registration() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const { data, loading, error, postData } = usePost<string, createProfileData>(
+    const { data, loading, error, postData } = usePost<string, CreateProfileData>(
         'profile/create'
     )
     const { email } = useSelector((state: RootState) => state.createProfile)
@@ -133,7 +137,12 @@ function Registration() {
                             />
                         </Container>
                     </Grid2>
-                    <Grid2 sx={{ sm: 6, display: { xs: 'none', sm: 'block' } }}>
+                    <Grid2
+                        component="div"
+                        sx={{
+                            flex: { xs: '1 1 100%', sm: '1 1 50%' },
+                            display: { xs: 'none', sm: 'block' }
+                        }}>
                         <BannerImage />
                     </Grid2>
                 </Grid2>

@@ -16,9 +16,14 @@ import { pxToRem, jwtExpirationDateConverter } from '@/utils';
 //TYPES
 import { MessageProps, LoginData, LoginPostData, DecodedJWT } from '@/types';
 
+// REDUX
+import { useSelector } from 'react-redux'
+import { RootState } from '@/redux'
+
 
 function Login() {
     const navigate = useNavigate()
+    const { email, message } = useSelector((state: RootState) => state.createProfile)
     const inputs = [
         { types: 'email', placeholder: 'Email' },
         { types: 'password', placeholder: 'Senha' },
@@ -29,7 +34,7 @@ function Login() {
     const handleMessage = (): MessageProps => {
         if (!error)
             return {
-                msg: '',
+                msg: message ?? '',
                 type: 'success',
             }
         switch (error) {
@@ -63,6 +68,12 @@ function Login() {
             if (Cookies.get('Authorization')) navigate('/home')
         }
     }, [data, navigate]);
+
+    useEffect(() => {
+        if (email) {
+            handleChange(0, email)
+        }
+    }, [email])
 
     return (
         <>
