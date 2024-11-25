@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732304489322" clover="3.2.0">
-  <project timestamp="1732304489322" name="All files">
-    <metrics statements="156" coveredstatements="69" conditionals="60" coveredconditionals="0" methods="79" coveredmethods="1" elements="295" coveredelements="70" complexity="0" loc="156" ncloc="156" packages="2" files="17" classes="17"/>
+<coverage generated="1732560123651" clover="3.2.0">
+  <project timestamp="1732560123651" name="All files">
+    <metrics statements="156" coveredstatements="79" conditionals="60" coveredconditionals="4" methods="79" coveredmethods="3" elements="295" coveredelements="86" complexity="0" loc="156" ncloc="156" packages="2" files="17" classes="17"/>
     <package name="components">
       <metrics statements="136" coveredstatements="60" conditionals="56" coveredconditionals="0" methods="75" coveredmethods="0"/>
       <file name="AvatarList.tsx" path="C:\Users\Thayl\CODE\dnc-sales-dashboard-thaylla\src\components\AvatarList.tsx">
@@ -178,41 +178,41 @@
       </file>
     </package>
     <package name="utils">
-      <metrics statements="20" coveredstatements="9" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="1"/>
+      <metrics statements="20" coveredstatements="19" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="3"/>
       <file name="currencyConverter.ts" path="C:\Users\Thayl\CODE\dnc-sales-dashboard-thaylla\src\utils\currencyConverter.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="6" count="1" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
       </file>
       <file name="highlightTextConverter.ts" path="C:\Users\Thayl\CODE\dnc-sales-dashboard-thaylla\src\utils\highlightTextConverter.ts">
-        <metrics statements="6" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
       </file>
       <file name="index.ts" path="C:\Users\Thayl\CODE\dnc-sales-dashboard-thaylla\src\utils\index.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
       </file>
       <file name="jwtExpirationDateConverter.ts" path="C:\Users\Thayl\CODE\dnc-sales-dashboard-thaylla\src\utils\jwtExpirationDateConverter.ts">
-        <metrics statements="6" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
       </file>
       <file name="pxToRem.ts" path="C:\Users\Thayl\CODE\dnc-sales-dashboard-thaylla\src\utils\pxToRem.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="24" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="31" type="stmt"/>
       </file>
     </package>
   </project>
