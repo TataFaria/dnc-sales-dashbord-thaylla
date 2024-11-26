@@ -7,7 +7,7 @@ import { Theme } from '@/types'
 import { ThemeProvider } from 'styled-components'
 import { themesList } from '@/resources/themesList'
 
-describe('pxToRem', () => {
+describe('Logo', () => {
     const renderComponent = (theme: Theme, width?: number, height?: number) => render(
         <ThemeProvider theme={theme}>
             <Logo height={height ?? 32} width={width ?? 32} />
